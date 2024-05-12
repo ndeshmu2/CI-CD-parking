@@ -1,0 +1,4 @@
+Image: parking-lot5.png
+Total parking spaces: 6
+Total free spaces detected: 1
+

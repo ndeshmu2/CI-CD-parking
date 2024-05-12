@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://kartik-project-parking.s3.amazonaws.com/static/PIc.jpg'); /* Updated path for Flask */
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            margin: auto;
+        }
+        input[type="file"] {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        label {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parking Management System</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Image:</label>
+            <input type="file" id="file" name="file" accept="image/*">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
