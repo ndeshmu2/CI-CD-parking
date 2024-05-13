@@ -1,5 +1,4 @@
 pipeline {
-    
     agent any
     environment {
         AWS_CREDENTIALS = credentials('jenkins')
@@ -8,15 +7,19 @@ pipeline {
     stages {
         stage('Init Terraform') {
             steps {
-                script {
-                    terraform.init()
+                dir('terraform') {  // Ensure you are in the right directory
+                    script {
+                        terraform.init()
+                    }
                 }
             }
         }
         stage('Apply Terraform') {
             steps {
-                script {
-                    terraform.apply(autoApprove: true)
+                dir('terraform') {  // Ensure you are in the right directory
+                    script {
+                        terraform.apply(autoApprove: true)
+                    }
                 }
             }
         }
@@ -30,4 +33,3 @@ pipeline {
         }
     }
 }
-
