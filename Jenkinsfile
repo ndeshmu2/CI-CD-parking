@@ -3,7 +3,7 @@ pipeline {
 
     environment {
 
-        AWS_CREDENTIALS = credentials('jenkins')
+        AWS_CREDENTIALS = credentials('jenk')
     }
 
     stages {
